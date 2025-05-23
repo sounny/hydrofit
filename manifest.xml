@@ -1,0 +1,10 @@
+<manifest>
+    <application>
+        <name>My Watch Face App</name>
+        <version>1.0.0</version>
+        <permissions>
+            <permission>gps</permission>
+            <permission>health</permission>
+        </permissions>
+    </application>
+</manifest>

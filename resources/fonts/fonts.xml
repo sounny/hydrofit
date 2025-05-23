@@ -1,0 +1,5 @@
+<fonts>
+    <font id="font_regular" path="fonts/RegularFont.ttf"/>
+    <font id="font_bold" path="fonts/BoldFont.ttf"/>
+    <font id="font_italic" path="fonts/ItalicFont.ttf"/>
+</fonts>

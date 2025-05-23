@@ -1,0 +1,6 @@
+<drawables>
+    <drawable name="background">background_image.png</drawable>
+    <drawable name="hour_hand">hour_hand_image.png</drawable>
+    <drawable name="minute_hand">minute_hand_image.png</drawable>
+    <drawable name="second_hand">second_hand_image.png</drawable>
+</drawables>

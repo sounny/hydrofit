@@ -1,0 +1,6 @@
+<layout>
+    <element type="time" position="center" />
+    <element type="date" position="top" />
+    <element type="battery" position="bottom-right" />
+    <element type="steps" position="bottom-left" />
+</layout>
