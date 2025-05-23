@@ -1,6 +1,16 @@
-<layout>
-    <element type="time" position="center" />
-    <element type="date" position="top" />
-    <element type="battery" position="bottom-right" />
-    <element type="steps" position="bottom-left" />
+<layout id="WatchFaceLayout">
+    <!-- Center Time -->
+    <label id="TimeLabel" x="center" y="40" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
+
+    <!-- Date below time -->
+    <label id="DateLabel" x="center" y="100" font="Graphics.FONT_MEDIUM" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
+
+    <!-- Top Left: Heart Rate -->
+    <label id="HRLabel" x="20" y="20" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_RED" />
+
+    <!-- Top Right: Battery -->
+    <label id="BatteryLabel" x="screen_width-20" y="20" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_GREEN" />
+
+    <!-- Bottom Center: Daily Steps (Example of another metric) -->
+    <label id="StepsLabel" x="center" y="screen_height-40" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
 </layout>

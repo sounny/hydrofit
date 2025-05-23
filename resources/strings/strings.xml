@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Watch Face</string>
+    <string name="app_name">HydroFit</string>
     <string name="time_format">hh:mm</string>
     <string name="date_format">EEE, MMM d</string>
     <string name="battery_label">Battery Level:</string>

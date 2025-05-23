@@ -1,10 +1,32 @@
-<manifest>
-    <application>
-        <name>My Watch Face App</name>
-        <version>1.0.0</version>
-        <permissions>
-            <permission>gps</permission>
-            <permission>health</permission>
-        </permissions>
-    </application>
-</manifest>
+<?xml version="1.0"?>
+<iq:manifest version="3">
+    <iq:application id="27213BFF-6D13-4AA5-8D13-578F30DD769D" type="watchface" name="@Strings.AppName" entry="MyWatchFaceApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="1.2.0">
+        <!--
+            Generate a new UUID for the id attribute above.
+            You can use an online UUID generator.
+            The entry attribute should match your main application class name.
+            The name and launcherIcon can point to resources.
+        -->
+        <iq:products>
+            <!-- Add product IDs for the devices you want to support -->
+            <!-- You can add these via VS Code "Monkey C: Edit Products" command -->
+            <!-- Example: <iq:product id="fenix6"/> -->
+            <iq:product id="garminswim2"/>
+        </iq:products>
+        <iq:permissions>
+            <!-- For Heart Rate -->
+            <!-- For Steps, daily distance etc. -->
+            <!-- If you were to use GPS, not currently in your code -->
+            <iq:uses-permission id="ActivityTracking"/>
+            <!-- <iq:uses-permission id="Positioning"/> -->
+            <iq:uses-permission id="Sensor"/>
+            <iq:uses-permission id="SensorHistory"/>
+            <iq:uses-permission id="UserProfile"/>
+        </iq:permissions>
+        <iq:languages>
+            <!-- Add other languages if you support them -->
+            <iq:language>eng</iq:language>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>
