@@ -4,4 +4,6 @@
     <string name="date_format">EEE, MMM d</string>
     <string name="battery_label">Battery Level:</string>
     <string name="steps_label">Steps:</string>
+    <string name="swim_distance_label">Swim Dist:</string>
+    <string name="lap_count_label">Laps:</string>
 </resources>

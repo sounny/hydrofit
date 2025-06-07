@@ -1,7 +1,7 @@
 # My Watch Face App
 
 ## Overview
-This project is a custom watch face application designed for Garmin devices. It showcases various features such as displaying time, date, and customizable elements.
+This project is a custom watch face application designed for Garmin devices, specifically targeting the Garmin Swim 2. It showcases features such as displaying time, date, and swimmer-oriented metrics.
 
 ## Project Structure
 - **manifest.xml**: Contains metadata for the watch face application, including app name, version, and permissions.
@@ -23,6 +23,7 @@ This project is a custom watch face application designed for Garmin devices. It 
 
 ## Usage
 Once installed on your Garmin device, you can select this watch face from the device settings. Customize the appearance and functionality as desired.
+The default layout includes heart rate, battery, daily steps, and basic swim metrics like distance swum and lap count.
 
 ## Contributing
 Feel free to submit issues or pull requests if you have suggestions or improvements for the watch face application.
