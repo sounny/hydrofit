@@ -4,6 +4,7 @@ import Toybox.System;
 import Toybox.WatchUi;
 import Toybox.Time.Gregorian;
 import Toybox.ActivityMonitor;
+import Toybox.Swim; // For swim metrics
 import Toybox.Application.Properties;
 
 // This file defines the custom view for the watch face, including the drawing logic and how the time and other elements are rendered.
@@ -15,6 +16,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
     private var hrLabel as Text?;
     private var batteryLabel as Text?;
     private var stepsLabel as Text?; // Added for steps
+    private var swimDistanceLabel as Text?; // Added for swim distance
+    private var lapCountLabel as Text?; // Added for lap count
 
     // Constructor
     function MyWatchFaceView() {
@@ -34,6 +37,8 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         hrLabel = findDrawableById("HRLabel") as Text;
         batteryLabel = findDrawableById("BatteryLabel") as Text;
         stepsLabel = findDrawableById("StepsLabel") as Text; // Added for steps
+        swimDistanceLabel = findDrawableById("SwimDistanceLabel") as Text;
+        lapCountLabel = findDrawableById("LapCountLabel") as Text;
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -99,6 +104,25 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         }
         if (stepsLabel != null) {
             stepsLabel.setText(stepsText);
+        }
+
+        // Get and show Swim Metrics
+        var distText = "DIST: --";
+        var lapsText = "LAPS: --";
+        var swimInfo = Swim.getInfo();
+        if (swimInfo != null) {
+            if (swimInfo.totalDistance != null) {
+                distText = Lang.format("DIST: $1$m", [swimInfo.totalDistance]);
+            }
+            if (swimInfo.totalLengths != null) {
+                lapsText = Lang.format("LAPS: $1$", [swimInfo.totalLengths]);
+            }
+        }
+        if (swimDistanceLabel != null) {
+            swimDistanceLabel.setText(distText);
+        }
+        if (lapCountLabel != null) {
+            lapCountLabel.setText(lapsText);
         }
 
         // Call the parent onUpdate function to redraw the layout

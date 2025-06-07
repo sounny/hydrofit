@@ -11,6 +11,12 @@
     <!-- Top Right: Battery -->
     <label id="BatteryLabel" x="screen_width-20" y="20" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_GREEN" />
 
-    <!-- Bottom Center: Daily Steps (Example of another metric) -->
+    <!-- Bottom Center: Daily Steps -->
     <label id="StepsLabel" x="center" y="screen_height-40" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
+
+    <!-- Bottom Left: Last Swim Distance -->
+    <label id="SwimDistanceLabel" x="20" y="screen_height-40" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_CYAN" />
+
+    <!-- Bottom Right: Lap Count -->
+    <label id="LapCountLabel" x="screen_width-20" y="screen_height-40" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_CYAN" />
 </layout>
