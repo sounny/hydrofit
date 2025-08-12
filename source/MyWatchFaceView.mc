@@ -52,10 +52,11 @@ class MyWatchFaceView extends WatchUi.WatchFace {
         // Clear the background
         graphics.clear();
 
-        // Draw the time
-        var currentTime = System.getTime();
-        var timeString = currentTime.format("HH:mm");
-        graphics.drawText(timeString, 50, 50, "fontName", "color");
+        // Draw the time using a built-in font and color
+        var clockTime = System.getClockTime();
+        var timeString = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        graphics.setColor(Graphics.COLOR_WHITE);
+        graphics.drawText(50, 50, Graphics.FONT_LARGE, timeString);
 
         // Additional drawing logic for date and other elements can be added here
     }
