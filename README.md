@@ -27,3 +27,6 @@ The default layout includes heart rate, battery, daily steps, and basic swim met
 
 ## Contributing
 Feel free to submit issues or pull requests if you have suggestions or improvements for the watch face application.
+
+## Development Notes
+- Rendering routines were updated to use valid Monkey C `drawText` arguments and built-in font/color constants. This fixes issues where time and date values were not displayed correctly.

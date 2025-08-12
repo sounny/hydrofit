@@ -19,12 +19,15 @@ class MyWatchFaceApp extends WatchFace {
     function drawTime(dc) {
         // Draw the current time on the watch face
         var time = System.getTime();
-        dc.drawText(time, this.getWidth() / 2, this.getHeight() / 2, Font.DEFAULT, Color.WHITE);
+        dc.setColor(Color.WHITE);
+        dc.drawText(this.getWidth() / 2, this.getHeight() / 2, Font.DEFAULT, time);
     }
 
     function drawDate(dc) {
         // Draw the current date on the watch face
         var date = System.getDate();
-        dc.drawText(date, this.getWidth() / 2, this.getHeight() / 2 + 20, Font.DEFAULT, Color.WHITE);
+        dc.setColor(Color.WHITE);
+        dc.drawText(this.getWidth() / 2, this.getHeight() / 2 + 20, Font.DEFAULT, date);
     }
 }
+
